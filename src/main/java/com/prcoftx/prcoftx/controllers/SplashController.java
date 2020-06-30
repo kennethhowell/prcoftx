@@ -19,8 +19,8 @@ public class SplashController {
         }
 
 
-        @GetMapping("/home/{n}")
-    public String test(@PathVariable Integer n){
-
-        }
+//        @GetMapping("/home/{n}")
+//    public String test(@PathVariable Integer n){
+//
+//        }
 }

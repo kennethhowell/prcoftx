@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
+<!--<link th:href="@{/static/css/navbar.css}" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <style>
+        :root {
+            --prcMain: #cc7722;
+            --prcSub: #1F01B9;
+        }
+        #navigation {
+            width: 100vw;
+            display: flex;
+        }
+
+        #logos h1, h2{
+            margin: 0px;
+            padding: 4px;
+        }
+
+        /*font-family: 'Open Sans', sans-serif;*/
+
+        /*font-family: 'Sorts Mill Goudy', serif;*/
+
+        h1 {
+            color: var(--prcMain);
+        }
+        h2 {
+            color: var(--prcSub);
+        /*color: red;*/
+        }
+
+        ul{
+            margin-left: auto;
+            list-style: none;
+            display: inline-flex;
+        }
+
+
+    </style>
 </head>
+
+
+
 <body>
 <div th:fragment="navbar">
-<ul>
-    <li>Roofing</li>
-    <li>Repair</li>
-    <li>Painting</li>
-    <li>Our Work</li>
-    <li>Testimonials</li>
-</ul>
-
+    <div id="navigation">
+            <div id="logos">
+                <h1>PRC</h1>
+                <h2>Prime Resource Construction</h2>
+            </div>
+            <ul>
+                <li>Roofing</li>
+                <li>Repair</li>
+                <li>Painting</li>
+                <li>Our Work</li>
+                <li>Testimonials</li>
+            </ul>
+    </div>
 
 </div>
 
