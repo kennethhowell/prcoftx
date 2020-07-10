@@ -1,73 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-<!--<link th:href="@{/static/css/navbar.css}" rel="stylesheet">-->
+<link th:href="@{/static/css/navbar.css}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <style>
-        :root {
-            --prcMain: #C07021;
-            --prcSub: #1F01B9;
-            --prcBG: #D7D7D7;
-        }
-
-        body {
-            margin: 0;
-        }
-        #navigation {
-            width: 100vw;
-            display: flex;
-            background-color: var(--prcBG);
-            border: black 4px solid;
-
-        }
-
-        #logos h1, h2{
-            margin: 0px;
-            padding: .1em .1em 0 .1em;
-        }
-
-        #bigP {
-            font-size: 3em;
-            margin-right: -3%;
-            padding-bottom: 0;
-        }
-
-        .goudy {
-            font-family: 'Sorts Mill Goudy', serif;
-        }
-
-        .sans {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        h4 {
-            color: var(--prcMain);
-            ;
-        }
-        h2 {
-            color: var(--prcSub);
-            margin-bottom: -1em;
-        /*color: red;*/
-        }
-
-        ul{
-            margin-left: auto;
-            margin-right: 2em ;
-            list-style: none;
-            display: inline-flex;
-            position: relative;
-            top: 10px;
-        }
-
-        li {
-            padding: .5em;
-        }
-
-
-
-
-    </style>
 </head>
 
 
@@ -76,15 +12,14 @@
 <div th:fragment="navbar">
     <div id="navigation">
             <div id="logos">
-<!--                <h4 class="sans">PRC</h4>-->
-                <h2 class="goudy"><span id="bigP">P</span>RIME RESOURCE CONSTRUCTION</h2>
+                <h2 class="serif"><span id="bigP">P</span>RIME RESOURCE CONSTRUCTION</h2>
             </div>
             <ul>
                 <li class="sans">Roofing</li>
                 <li class="sans">Repair</li>
                 <li class="sans">Painting</li>
-                <li class="sans">Our Work</li>
-                <li class="sans">Testimonials</li>
+                <a th:href="@{/gallery}"><li class="sans">Our Work</li></a>
+                <a th:href="@{/testimonial}"><li class="sans">Testimonials</li></a>
             </ul>
     </div>
 

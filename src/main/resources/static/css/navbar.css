@@ -1,3 +1,5 @@
+/* general */
+
 :root {
     --prcMain: #C07021;
     --prcSub: #1F01B9;
@@ -7,11 +9,13 @@
 body {
     margin: 0;
 }
+
+/* navbar */
 #navigation {
     width: 100vw;
     display: flex;
     background-color: var(--prcBG);
-    border: black 4px solid;
+    border: black 2px solid;
 
 }
 
@@ -26,7 +30,7 @@ body {
     padding-bottom: 0;
 }
 
-.goudy {
+.serif {
     font-family: 'Sorts Mill Goudy', serif;
 }
 
@@ -55,3 +59,34 @@ li {
     padding: .5em;
 }
 
+/* splash */
+
+#backgroundContainer{
+    width: 100vw;
+    height: 80vh;
+    position: static;
+}
+
+#backgroundHome {
+    width: 100vw;
+    height: 85vh;
+    opacity: .4;
+    background-image: url('../img/houseex.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+}
+
+#topCard{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: black 2px solid;
+    padding: .75em;
+    background-color: var(--prcBG);
+
+}
