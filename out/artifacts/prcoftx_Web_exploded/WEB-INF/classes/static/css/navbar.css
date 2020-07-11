@@ -8,6 +8,7 @@
 
 body {
     margin: 0;
+    background: var(--prcBG);
 }
 
 /* navbar */
@@ -64,7 +65,8 @@ li {
 #backgroundContainer{
     width: 100vw;
     height: 80vh;
-    position: static;
+    position: absolute;
+    z-index: -1;
 }
 
 #backgroundHome {
@@ -75,20 +77,74 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 0;
     position: relative;
+    border-bottom: 2px solid black;
+}
+
+@keyframes animated-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255,255,255,0);
+    }
 }
 
 #topCard{
     color: black;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    border: black 2px solid;
-    padding: .75em;
+
+    padding: 2.5em;
+    text-align: center;
+
+
+    border-width:4px 30px 4px 30px;
+    border-style: solid;
+    border-color: var(--prcSub) var(--prcSub) var(--prcMain) var(--prcMain);
+    border-radius:0 120px 0 120px;
+    -moz-border-radius:0 120px 0 120px;
+    -webkit-border-radius:0 120px 0 120px;
+
+    background-color: var(--prcBG);
+    background-origin: border-box;
+
+    animation: animated-border 1.5s infinite;
+
+    transition: border 2000ms ease-out;
+}
+
+
+#topCard:hover {
+    border-color: var(--prcMain) var(--prcMain) var(--prcSub) var(--prcSub);
+}
+#splashBullet {
+    border-radius: 0px 100px 100px 0px;
+    border: 2px solid;
+    border-color:  var(--prcMain);
+
+    width: 300px;
+    height: 100px;
+
+    position: fixed;
+    top: 15%;
+
+
     background-color: var(--prcBG);
 
+    transition: border 500ms ease-out;
+}
+
+#splashBullet:hover {
+    border-color: var(--prcSub);
+}
+
+#splashBulletTxt {
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
