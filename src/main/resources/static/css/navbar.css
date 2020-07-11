@@ -20,6 +20,11 @@ body {
 
 }
 
+#navigation ul a {
+    color: black;
+    text-decoration: none;
+}
+
 #logos h1, h2{
     margin: 0px;
     padding: .1em .1em 0 .1em;
@@ -164,4 +169,18 @@ li {
     width: 280px;
     height: 420px;
     border: 3px solid var(--prcMain);
+}
+
+.trinityCard p {
+    padding: 1em;
+}
+
+.cardIMG {
+    border-bottom: 3px solid var(--prcMain);
+    background-image: url('../img/propertyLRG.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: available;
+    height: 140px;
 }

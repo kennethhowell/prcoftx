@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head th:replace="partials/header :: headerFragment (pageTitle='PRC ')">
+<head th:replace="partials/header :: headerFragment (pageTitle='PRC')">
 
 </head>
 <body>
@@ -24,11 +24,42 @@
 
     <div id="bottomcardContainer">
 
-        <div class="trinityCard"></div>
-        <div class="trinityCard"></div>
-        <div class="trinityCard"></div>
+        <div class="trinityCard">
+            <div class="cardIMG" id="roofing"></div>
+            <p id="roofingP">An example of the first card's possible text.</p>
+        </div>
+
+        <div class="trinityCard">
+            <div class="cardIMG" id="repair"></div>
+            <p id="repairP">An example of the second card's possible text.</p>
+        </div>
+
+        <div class="trinityCard">
+            <div class="cardIMG" id="painting"></div>
+            <p id="paintingP">An example of the third card's possible text.</p>
+        </div>
 
     </div>
 
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+<script>
+    $("#roofingLink").click(function(){
+        $("#roofingP").html("Check it out, it changed the roofing card.")
+    })
+
+    $("#repairLink").click(function(){
+        $("#repairP").html("Check it out, it changed the repair card.")
+    })
+
+    $("#paintingLink").click(function(){
+        $("#paintingP").html("Check it out, it changed the painting card.")
+    })
+
+
+</script>
 </body>
 </html>
