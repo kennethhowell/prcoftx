@@ -69,20 +69,20 @@
 
 <script>
 
-// click system > side anchor box > fade appropriate card
-    $("#roofingLink").click(function(){
+    // click system > side anchor box > fade appropriate card
+    $("#roofingLink").click(function () {
         $("#splashcard1").fadeTo("slow", 1);
         $("#splashcard1").toggleClass("clickChange");
         $("#splashcard2, #splashcard3").fadeTo("slow", 0.5);
         $("#roofingP").html("Check it out, it changed the roofing card.")
     })
-    $("#repairLink").click(function(){
+    $("#repairLink").click(function () {
         $("#splashcard2").fadeTo("slow", 1);
         $("#splashcard2").toggleClass("clickChange");
         $("#splashcard1, #splashcard3").fadeTo("slow", 0.5);
         $("#repairP").html("Check it out, it changed the repair card.")
     })
-    $("#paintingLink").click(function(){
+    $("#paintingLink").click(function () {
         $("#splashcard3").fadeTo("slow", 1);
         $("#splashcard3").toggleClass("clickChange");
         $("#splashcard1, #splashcard2").fadeTo("slow", 0.5);
@@ -91,81 +91,45 @@
 
     // // hover system - jquery ||wave wand|| magiccccc
 
-$("#splashcard1").hover(function(){
-    $("#splashcard1").stop().fadeTo("slow", 1);
-    $("#splashcard2").stop().fadeTo("slow", 0.5);
-    $("#splashcard3").stop().fadeTo("slow", 0.5);},
+    $("#splashcard1").hover(function () {
+            $("#splashcard1").stop().fadeTo("slow", 1);
+            $("#splashcard2").stop().fadeTo("slow", 0.5);
+            $("#splashcard3").stop().fadeTo("slow", 0.5);
+        },
 
-        function(){
+        function () {
             $("#splashcard2").stop().fadeTo("slow", 1);
             $("#splashcard3").stop().fadeTo("slow", 1);
         }
     )
 
-$("#splashcard2").hover(function(){
-    $("#splashcard2").stop().fadeTo("slow", 1);
-    $("#splashcard1").stop().fadeTo("slow", 0.5);
-    $("#splashcard3").stop().fadeTo("slow", 0.5);},
+    $("#splashcard2").hover(function () {
+            $("#splashcard2").stop().fadeTo("slow", 1);
+            $("#splashcard1").stop().fadeTo("slow", 0.5);
+            $("#splashcard3").stop().fadeTo("slow", 0.5);
+        },
 
 
-        function(){
-        $("#splashcard1").stop().fadeTo("slow", 1);
-        $("#splashcard3").stop().fadeTo("slow", 1);
+        function () {
+            $("#splashcard1").stop().fadeTo("slow", 1);
+            $("#splashcard3").stop().fadeTo("slow", 1);
 
-    }
-);
+        }
+    );
 
 
-$("#splashcard3").hover(
-    function(){
-    $("#splashcard3").stop().fadeTo("slow", 1);
-    $("#splashcard1").stop().fadeTo("slow", 0.5);
-    $("#splashcard2").stop().fadeTo("slow", 0.5)},
+    $("#splashcard3").hover(
+        function () {
+            $("#splashcard3").stop().fadeTo("slow", 1);
+            $("#splashcard1").stop().fadeTo("slow", 0.5);
+            $("#splashcard2").stop().fadeTo("slow", 0.5)
+        },
 
-    function(){
-    $("#splashcard1").stop().fadeTo("slow", 1);
-    $("#splashcard2").stop().fadeTo("slow", 1);
-    }
-
-)
-    //
-    // $("#splashcard1").mouseenter(function(){
-    //     $("#splashcard2, #splashcard3").stop("true", "true");
-    //     $("#splashcard1").fadeTo("fast", 1);
-    //     $(".trinityCard").removeClass("clickChange");
-    //     $("#splashcard2, #splashcard3").fadeTo(1000, 0);
-    // })
-    //
-    // $("#splashcard2").mouseenter(function(){
-    //     $("#splashcard1, #splashcard3").stop("true", "true");
-    //     $("#splashcard2").fadeTo("fast", 1);
-    //     $(".trinityCard").removeClass("clickChange");
-    //     $("#splashcard1, #splashcard3").fadeTo(1000, 0);
-    // })
-    //
-    // $("#splashcard3").mouseenter(function(){
-    //     $("#splashcard2, #splashcard1").stop("true", "true");
-    //     $("#splashcard3").fadeTo("fast", 1);
-    //     $(".trinityCard").removeClass("clickChange");
-    //     $("#splashcard1, #splashcard2").fadeTo(1000, 0);
-    // })
-    //
-    // $("#splashcard1").mouseleave(function(){
-    //     $("#splashcard2, #splashcard3").stop("true", "true");
-    //     $("#splashcard1").toggleClass("clickChange");
-    //     $("#splashcard3, #splashcard2").fadeTo(1000, 1);
-    // })
-    // $("#splashcard2").mouseleave(function(){
-    //     $("#splashcard1, #splashcard3").stop("true", "true");
-    //     $("#splashcard2").toggleClass("clickChange");
-    //     $("#splashcard3, #splashcard1").fadeTo(1000, 1);
-    //
-    // })
-    // $("#splashcard3").mouseleave(function(){
-    //     $("#splashcard2, #splashcard1").stop("true", "true");
-    //     $("#splashcard3").toggleClass("clickChange");
-    //     $("#splashcard1, #splashcard2").fadeTo(1000, 1);
-    // })
+        function () {
+            $("#splashcard1").stop().fadeTo("slow", 1);
+            $("#splashcard2").stop().fadeTo("slow", 1);
+        }
+    )
 
 </script>
 </body>
