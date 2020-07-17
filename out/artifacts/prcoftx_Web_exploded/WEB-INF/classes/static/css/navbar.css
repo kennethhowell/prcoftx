@@ -52,7 +52,7 @@ h2 {
     color: var(--prcSub);
 }
 
-ul{
+#navbarAnchors{
     margin-left: auto;
     margin-right: 2em ;
     list-style: none;
@@ -124,33 +124,83 @@ li {
     border-color: var(--prcMain) var(--prcMain) var(--prcSub) var(--prcSub);
 }
 
-#splashBullet {
-    border-radius: 0px 100px 100px 0px;
-    border: 2px solid;
-    border-color:  var(--prcMain);
+/*side badge #splashBullet = undesired for now*/
+/*#splashBullet {*/
+/*    border-radius: 0px 100px 100px 0px;*/
+/*    border: 2px solid;*/
+/*    border-color:  var(--prcMain);*/
 
-    width: 300px;
-    height: 100px;
+/*    width: 300px;*/
+/*    height: 100px;*/
 
-    position: fixed;
-    top: 15%;
+/*    position: fixed;*/
+/*    top: 15%;*/
+/*    z-index: 1;*/
+
+/*    background-color: var(--prcBG);*/
+
+/*    transition: border 500ms ease-out;*/
+/*}*/
+
+/*#splashBullet:hover {*/
+/*    border-color: var(--prcSub);*/
+/*}*/
+
+/*#splashBulletTxt {*/
+/*    top: 50%;*/
+/*    left: 45%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    position: absolute;*/
+/*}*/
+
+/* side badges w/ anchors */
+#sideNavCont {
+    height: 100%;
+    position: absolute;
     z-index: 1;
+}
 
+/*#sideNav a {*/
+/*    padding: 25px 25px;*/
+/*    color: black;*/
+/*    background-color: var(--prcBG);*/
+
+/*    text-decoration: none;*/
+/*}*/
+
+@keyframes animated-borderSidenav {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255,255,255,0);
+    }
+}
+
+#sideNavUL {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+
+.sideNavLi {
+    padding: 25px 25px;
+    color: black;
     background-color: var(--prcBG);
 
+    text-decoration: none;
+
+    border: 4px solid var(--prcSub);
     transition: border 500ms ease-out;
 }
 
-#splashBullet:hover {
-    border-color: var(--prcSub);
+.sideNavLi:hover {
+    border-color: var(--prcMain);
 }
 
-#splashBulletTxt {
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-}
 
 /* bottom splash + card system */
 
