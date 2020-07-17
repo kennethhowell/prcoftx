@@ -15,14 +15,14 @@
 
     <div id="sideNavCont">
         <ul id="sideNavUL">
-            <a class="sideNavLi" href="#roofing">
-                <li id="roofingLink" class="serif">Roofing</li>
+            <a class="sideNavAnchors" href="#roofing">
+                <li id="roofingLink" class="serif sideAnchors">Roofing</li>
             </a>
-            <a class="sideNavLi" href="#repair">
-                <li id="repairLink" class="serif">Repair</li>
+            <a class="sideNavAnchors" href="#repair">
+                <li id="repairLink" class="serif sideAnchors">Repair</li>
             </a>
-            <a class="sideNavLi" href="#painting">
-                <li id="paintingLink" class="serif">Painting</li>
+            <a class="sideNavAnchors" href="#painting">
+                <li id="paintingLink" class="serif sideAnchors">Painting</li>
             </a>
         </ul>
     </div>
@@ -47,17 +47,15 @@
 
 <div id="bottomcardContainer">
 
-    <div class="trinityCard">
+    <div id="splashcard1" class="trinityCard">
         <div class="cardIMG" id="roofing"></div>
         <p id="roofingP">An example of the first card's possible text.</p>
     </div>
-
-    <div class="trinityCard">
+    <div id="splashcard2" class="trinityCard">
         <div class="cardIMG" id="repair"></div>
         <p id="repairP">An example of the second card's possible text.</p>
     </div>
-
-    <div class="trinityCard">
+    <div id="splashcard3" class="trinityCard">
         <div class="cardIMG" id="painting"></div>
         <p id="paintingP">An example of the third card's possible text.</p>
     </div>
@@ -70,36 +68,68 @@
         crossorigin="anonymous"></script>
 
 <script>
+
+    // click system > side anchor box > fade appropriate card
     $("#roofingLink").click(function () {
+        $("#splashcard1").fadeTo("slow", 1);
+        $("#splashcard1").toggleClass("clickChange");
+        $("#splashcard2, #splashcard3").fadeTo("slow", 0.5);
         $("#roofingP").html("Check it out, it changed the roofing card.")
     })
-
     $("#repairLink").click(function () {
+        $("#splashcard2").fadeTo("slow", 1);
+        $("#splashcard2").toggleClass("clickChange");
+        $("#splashcard1, #splashcard3").fadeTo("slow", 0.5);
         $("#repairP").html("Check it out, it changed the repair card.")
     })
-
     $("#paintingLink").click(function () {
+        $("#splashcard3").fadeTo("slow", 1);
+        $("#splashcard3").toggleClass("clickChange");
+        $("#splashcard1, #splashcard2").fadeTo("slow", 0.5);
         $("#paintingP").html("Check it out, it changed the painting card.")
     })
 
-    function removeVowels(arr) {
-        var vowelArr = ["a", "e", "i", "o", "u"];
+    // // hover system - jquery ||wave wand|| magiccccc
 
-        arr.toLowerCase();
-        var splitArr = arr.split("");
-        var str = "";
+    $("#splashcard1").hover(function () {
+            $("#splashcard1").stop().fadeTo("slow", 1);
+            $("#splashcard2").stop().fadeTo("slow", 0.5);
+            $("#splashcard3").stop().fadeTo("slow", 0.5);
+        },
 
-
-        for (let i = 0; i < arr.length; i++) {
-            for (l)
-                if (splitArr[i] !== vowelArr[i]) {
-                    str += splitArr[i];
-                }
+        function () {
+            $("#splashcard2").stop().fadeTo("slow", 1);
+            $("#splashcard3").stop().fadeTo("slow", 1);
         }
+    )
 
-        return str;
-    }
+    $("#splashcard2").hover(function () {
+            $("#splashcard2").stop().fadeTo("slow", 1);
+            $("#splashcard1").stop().fadeTo("slow", 0.5);
+            $("#splashcard3").stop().fadeTo("slow", 0.5);
+        },
 
+
+        function () {
+            $("#splashcard1").stop().fadeTo("slow", 1);
+            $("#splashcard3").stop().fadeTo("slow", 1);
+
+        }
+    );
+
+
+    $("#splashcard3").hover(
+        function () {
+            $("#splashcard3").stop().fadeTo("slow", 1);
+            $("#splashcard1").stop().fadeTo("slow", 0.5);
+            $("#splashcard2").stop().fadeTo("slow", 0.5)
+        },
+
+        function () {
+            $("#splashcard1").stop().fadeTo("slow", 1);
+            $("#splashcard2").stop().fadeTo("slow", 1);
+        }
+    )
 
 </script>
 </body>

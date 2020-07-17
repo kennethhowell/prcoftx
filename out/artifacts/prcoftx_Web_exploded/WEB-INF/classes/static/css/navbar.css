@@ -16,7 +16,8 @@ body {
     width: 100vw;
     display: flex;
     background-color: var(--prcBG);
-    border: black 2px solid;
+    /*border-bottom: black 2px solid;*/
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.8);
 
 }
 
@@ -109,8 +110,7 @@ li {
     border-style: solid;
     border-color: var(--prcSub) var(--prcSub) var(--prcMain) var(--prcMain);
     border-radius:0 120px 0 120px;
-    /*-moz-border-radius:0 120px 0 120px;*/
-    /*-webkit-border-radius:0 120px 0 120px;*/
+
 
     background-color: var(--prcBG);
     background-origin: border-box;
@@ -124,57 +124,12 @@ li {
     border-color: var(--prcMain) var(--prcMain) var(--prcSub) var(--prcSub);
 }
 
-/*side badge #splashBullet = undesired for now*/
-/*#splashBullet {*/
-/*    border-radius: 0px 100px 100px 0px;*/
-/*    border: 2px solid;*/
-/*    border-color:  var(--prcMain);*/
-
-/*    width: 300px;*/
-/*    height: 100px;*/
-
-/*    position: fixed;*/
-/*    top: 15%;*/
-/*    z-index: 1;*/
-
-/*    background-color: var(--prcBG);*/
-
-/*    transition: border 500ms ease-out;*/
-/*}*/
-
-/*#splashBullet:hover {*/
-/*    border-color: var(--prcSub);*/
-/*}*/
-
-/*#splashBulletTxt {*/
-/*    top: 50%;*/
-/*    left: 45%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    position: absolute;*/
-/*}*/
 
 /* side badges w/ anchors */
 #sideNavCont {
     height: 100%;
     position: absolute;
     z-index: 1;
-}
-
-/*#sideNav a {*/
-/*    padding: 25px 25px;*/
-/*    color: black;*/
-/*    background-color: var(--prcBG);*/
-
-/*    text-decoration: none;*/
-/*}*/
-
-@keyframes animated-borderSidenav {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
-    }
-    100% {
-        box-shadow: 0 0 0 20px rgba(255,255,255,0);
-    }
 }
 
 #sideNavUL {
@@ -186,19 +141,25 @@ li {
     justify-content: space-evenly;
 }
 
-.sideNavLi {
-    padding: 25px 25px;
+.sideNavAnchors {
+    padding: 12px 12px;
     color: black;
     background-color: var(--prcBG);
 
-    text-decoration: none;
 
-    border: 4px solid var(--prcSub);
-    transition: border 500ms ease-out;
+    text-decoration: none;
+    font-size: larger;
+    text-align: center;
+
+
+    box-shadow: -3px 3px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 500ms ease;
 }
 
-.sideNavLi:hover {
-    border-color: var(--prcMain);
+
+
+.sideNavAnchors:hover {
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -221,9 +182,20 @@ li {
     border: 3px solid var(--prcMain);
 }
 
+
 .trinityCard p {
     padding: 1em;
 }
+
+#splashcard1:hover, #splashcard2:hover, #splashcard3:hover{
+    animation: animated-border 1.5s infinite;
+
+}
+
+.clickChange {
+    animation: animated-border 1.5s infinite;
+}
+
 
 .cardIMG {
     border-bottom: 3px solid var(--prcMain);
