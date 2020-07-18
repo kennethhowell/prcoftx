@@ -132,19 +132,35 @@
     )
 
         $('#aboutUs').hover(function() {
-                $('#pop').stop().fadeTo("slow", 1);
-                $('#emergencyLi').stop().fadeOut('slow', function() {
-                    $('#emergencyLi').html("don't touch me").css("background-color", "#3AB9AE");
-                    $('#emergencyLi').fadeIn('slow');
-                })
+
+                $("#emergencyLi").stop().hide();
+                $('#emergencyLi').html("& Locally Owned + Operated");
+                $('#emergencyLi').fadeIn(2000);
+
+                $("#aboutUs").stop().hide();
+                $("#aboutUs").html("Licensed,");
+                $('#aboutUs').fadeIn(2000);
+
+
+                $('#pop').stop().css("width", "340").fadeTo(2000, 1);
         },
            function() {
-               $('#pop').stop().fadeTo("slow",0);
-               $('#pop').stop().fadeTo("slow",0);
-               $('#emergencyLi').stop().fadeOut('slow', function() {
-                   $('#emergencyLi').html("Emergency?").css("background-color", "var(--prcBG");
-                   $('#emergencyLi').fadeIn('slow');
-               })
+               // $('#pop').stop().fadeTo("fast",0);
+               //
+               // $('#emergencyLi').stop().fadeOut('fast', function() {
+               //     $('#emergencyLi').html("Emergency?");
+               //     $('#emergencyLi').fadeIn('slow');
+               // })
+               //
+               // $('#aboutUs').stop().fadeOut('fast', function() {
+               //     $('#aboutUs').html("About Us");
+               //     $('#aboutUs').fadeIn('slow');
+               // })
+
+
+
+
+
            }
         );
 </script>

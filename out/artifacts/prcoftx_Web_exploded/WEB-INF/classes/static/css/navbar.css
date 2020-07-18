@@ -48,15 +48,20 @@ h2 {
     color: var(--prcSub);
 }
 
+
+
 #navbarAnchors {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-self: stretch;
     align-items: center;
 
+
     width: 30%;
 
-    margin: 0 0 0 auto;
+    font-size: medium;
+
+    margin: 0 1% 0 auto;
     list-style: none;
     position: relative;
 }
@@ -67,26 +72,14 @@ h2 {
     align-items: center;
     justify-content: center;
 
+
     width: 180px;
 
-
-    border: 1px solid red;
 }
+
 
 #pop {
     opacity: 0;
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    background: #3AB9AE;
-    border: 1px solid #A2ADBC;
-
-
-;
-    /*-webkit-box-shadow   : 0px 0px 5px 0px rgba(164, 164, 164, 1);*/
-    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
 }
 
 /* splash */
@@ -175,13 +168,13 @@ h2 {
     text-align: center;
 
 
-    box-shadow: -3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: box-shadow 500ms ease;
 }
 
 
 .sideNavAnchors:hover {
-    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 
