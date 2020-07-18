@@ -131,11 +131,22 @@
         }
     )
 
-    $(function() {
         $('#aboutUs').hover(function() {
-            $('#pop').toggle();
-        });
-    });
+                $('#pop').stop().fadeTo("slow", 1);
+                $('#emergencyLi').stop().fadeOut('slow', function() {
+                    $('#emergencyLi').html("don't touch me").css("background-color", "#3AB9AE");
+                    $('#emergencyLi').fadeIn('slow');
+                })
+        },
+           function() {
+               $('#pop').stop().fadeTo("slow",0);
+               $('#pop').stop().fadeTo("slow",0);
+               $('#emergencyLi').stop().fadeOut('slow', function() {
+                   $('#emergencyLi').html("Emergency?").css("background-color", "var(--prcBG");
+                   $('#emergencyLi').fadeIn('slow');
+               })
+           }
+        );
 </script>
 </body>
 </html>

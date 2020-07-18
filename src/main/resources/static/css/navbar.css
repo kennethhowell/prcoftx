@@ -21,7 +21,7 @@ body {
 }
 
 
-#logos h1, h2{
+#logos h1, h2 {
     margin: 0px;
     padding: .1em .1em 0 .1em;
 }
@@ -41,14 +41,14 @@ body {
 }
 
 h4 {
-    color: var(--prcMain);
-;
+    color: var(--prcMain);;
 }
+
 h2 {
     color: var(--prcSub);
 }
 
-#navbarAnchors{
+#navbarAnchors {
     display: flex;
     justify-content: end;
     align-self: stretch;
@@ -73,23 +73,25 @@ h2 {
     border: 1px solid red;
 }
 
-#pop{
-    display              : none;
-    position             : absolute;
-    z-index              : 1;
-    padding              : 10px;
-    background           : #3AB9AE;
-    border               : 1px solid #A2ADBC;
-    /*-moz-border-radius   : 20px;*/
-    /*-webkit-border-radius: 20px;*/
-    margin               : 0px;
+#pop {
+    opacity: 0;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    background: #3AB9AE;
+    border: 1px solid #A2ADBC;
+
+
+;
     /*-webkit-box-shadow   : 0px 0px 5px 0px rgba(164, 164, 164, 1);*/
-    box-shadow           : 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
 }
 
 /* splash */
 
-#backgroundContainer{
+#backgroundContainer {
     width: 100vw;
     height: 80vh;
     position: relative;
@@ -109,14 +111,14 @@ h2 {
 
 @keyframes animated-border {
     0% {
-        box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
     }
     100% {
-        box-shadow: 0 0 0 20px rgba(255,255,255,0);
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
     }
 }
 
-#topCard{
+#topCard {
     color: black;
     position: absolute;
     top: 50%;
@@ -127,10 +129,10 @@ h2 {
     padding: 2.5em;
     text-align: center;
 
-    border-width:4px 30px 4px 30px;
+    border-width: 4px 30px 4px 30px;
     border-style: solid;
     border-color: var(--prcSub) var(--prcSub) var(--prcMain) var(--prcMain);
-    border-radius:0 120px 0 120px;
+    border-radius: 0 120px 0 120px;
 
 
     background-color: var(--prcBG);
@@ -178,7 +180,6 @@ h2 {
 }
 
 
-
 .sideNavAnchors:hover {
     box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
 }
@@ -208,7 +209,7 @@ h2 {
     padding: 1em;
 }
 
-#splashcard1:hover, #splashcard2:hover, #splashcard3:hover{
+#splashcard1:hover, #splashcard2:hover, #splashcard3:hover {
     animation: animated-border 1.5s infinite;
 
 }

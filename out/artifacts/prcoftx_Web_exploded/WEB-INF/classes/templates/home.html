@@ -131,11 +131,17 @@
         }
     )
 
-    $(function() {
         $('#aboutUs').hover(function() {
-            $('#pop').toggle();
-        });
-    });
+                $('#pop').stop().fadeTo("slow", 1);
+                $('#emergencyLi').stop().fadeOut('slow', function() {
+                    $('#emergencyLi').html("don't touch me");
+                    $('#emergencyLi').fadeIn('slow');
+                })
+        },
+           function() {
+               $('#pop').stop().fadeTo("slow",0);
+           }
+        );
 </script>
 </body>
 </html>
