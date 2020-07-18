@@ -37,7 +37,7 @@ body {
 }
 
 .sans {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 h4 {
@@ -50,13 +50,13 @@ h2 {
 
 #navbarAnchors{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: end;
     align-self: stretch;
     align-items: center;
 
     width: 30%;
 
-    margin: 0 2em 0 auto;
+    margin: 0 0 0 auto;
     list-style: none;
     position: relative;
 }
@@ -67,9 +67,24 @@ h2 {
     align-items: center;
     justify-content: center;
 
+    width: 180px;
 
 
-    border: 1px solid black;
+    border: 1px solid red;
+}
+
+#pop{
+    display              : none;
+    position             : absolute;
+    z-index              : 1;
+    padding              : 10px;
+    background           : #3AB9AE;
+    border               : 1px solid #A2ADBC;
+    /*-moz-border-radius   : 20px;*/
+    /*-webkit-border-radius: 20px;*/
+    margin               : 0px;
+    /*-webkit-box-shadow   : 0px 0px 5px 0px rgba(164, 164, 164, 1);*/
+    box-shadow           : 0px 0px 5px 0px rgba(164, 164, 164, 1);
 }
 
 /* splash */
