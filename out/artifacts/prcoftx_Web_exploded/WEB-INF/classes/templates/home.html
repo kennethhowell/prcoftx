@@ -74,19 +74,19 @@
         $("#splashcard1").fadeTo("slow", 1);
         $("#splashcard1").toggleClass("clickChange");
         $("#splashcard2, #splashcard3").fadeTo("slow", 0.5);
-        $("#roofingP").html("Check it out, it changed the roofing card.")
+        $("#roofingP").html("Roof damage can both be frustrating in the short-term and damaging to other parts of your house in the long term. Contact us with a description of your problem and how to reach back to you, and we'll start the process of getting your headache gone.")
     })
     $("#repairLink").click(function () {
         $("#splashcard2").fadeTo("slow", 1);
         $("#splashcard2").toggleClass("clickChange");
         $("#splashcard1, #splashcard3").fadeTo("slow", 0.5);
-        $("#repairP").html("Check it out, it changed the repair card.")
+        $("#repairP").html("PRC can tackle repairs of any size, your next remodeling idea, or that addition you had considered but never got around to - contact us and let us know!")
     })
     $("#paintingLink").click(function () {
         $("#splashcard3").fadeTo("slow", 1);
         $("#splashcard3").toggleClass("clickChange");
         $("#splashcard1, #splashcard2").fadeTo("slow", 0.5);
-        $("#paintingP").html("Check it out, it changed the painting card.")
+        $("#paintingP").html("Interior and exterior painting can be time-intensive and delicate work - let us put together suggestions of palettes, discuss the type of paint, and the arrangements to refresh your home's look!")
     })
 
     // // hover system - jquery ||wave wand|| magiccccc
@@ -132,39 +132,8 @@
     )
 
         $('#aboutUs').hover(function() {
-
-                $("#navbarAnchors").css("justify-content", "end");
-                $(".anchorTop").css("width", "80px");
-                $("#emergencyLi").stop().hide();
-                $('#emergencyLi').html("& Locally Owned + Operated");
-                $('#emergencyLi').fadeIn(2000);
-
-                $("#aboutUs").stop().hide();
-                $("#aboutUs").html("Licensed,");
-                $('#aboutUs').fadeIn(2000);
-
-
-                $('#pop').stop().fadeTo(2000, 1);
-        },
-           function() {
-
-               $('#pop').stop().fadeTo("fast",0);
-
-               $('#emergencyLi').stop().fadeOut('fast', function() {
-                   $('#emergencyLi').html("Emergency?");
-                   $('#emergencyLi').fadeIn('slow');
-               })
-
-               $('#aboutUs').stop().fadeOut('fast', function() {
-                   $('#aboutUs').html("About Us");
-                   $('#aboutUs').fadeIn('slow');
-               })
-
-
-
-
-
-           }
+                $('#aboutUs').html.toLowerCase();
+        }
         );
 </script>
 </body>

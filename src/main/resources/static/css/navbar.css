@@ -52,7 +52,7 @@ h2 {
 
 #navbarAnchors {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-self: stretch;
     align-items: center;
 
@@ -144,6 +144,9 @@ h2 {
 /* side badges w/ anchors */
 #sideNavCont {
     height: 100%;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     position: absolute;
     z-index: 1;
 }
@@ -158,7 +161,7 @@ h2 {
 }
 
 .sideNavAnchors {
-    padding: 12px 12px;
+    padding: 24px 24px;
     color: black;
     background-color: var(--prcBG);
 
